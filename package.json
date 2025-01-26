@@ -1,0 +1,33 @@
+{
+  "name": "turtle-bot-writer",
+  "version": "1.0.0",
+  "description": "A project that uses Gemini to create character cards (Also claims the dailies for the accounts)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node .\\src\\pixaiHandler.js",
+    "launch": "npm install && npm start",
+    "asd": "node autoclaim.js"
+  },
+  "author": "TurtleGuy",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "file-type": "^19.0.0",
+    "node-fetch": "^3.3.1",
+    "node-telegram-bot-api": "^0.66.0",
+    "puppeteer": "^23.11.1",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-stealth": "^2.11.1",
+    "sharp": "^0.33.1",
+    "dotenv": "^10.0.0",
+    "mime-types": "^2.1.33",
+    "png-chunk-text": "^1.0.0",
+    "png-chunks-encode": "^1.0.0",
+    "png-chunks-extract": "^1.0.0",
+    "node-schedule": "^2.1.0"
+  }
+}

@@ -1,0 +1,23 @@
+**Prompt for the AI:**  
+
+You are tasked with generating a list of short greeting concepts for a roleplay scenario. The concepts must involve the provided character and {{user}}, adhering strictly to the details and personality outlined in the given character card. Follow these rules:  
+
+1. **Align with the character’s personality and world**: Only include scenarios and actions that the character would plausibly do, whether in a realistic or fictional setting.  
+2. **Involve realistic and fictional examples**: Ensure the scenarios fit the character's background—e.g., classmates, coworkers, or magical beings—depending on their description.  
+3. **Keep it concise**: Each concept should be a brief base idea, no more than one sentence.  
+4. **Involve the character engaging with {{user}}**: Focus on interactions where the character initiates contact or is part of the same scene as {{user}}, without assuming control over {{user}}.  
+5. **Format as a simple list**: Separate each concept with `\n`.  
+
+### Example Output:  
+- The character greets {{user}} in the breakroom, offering them a cup of coffee.  
+- The character sits next to {{user}} in class, asking if they understood the homework.  
+- The character passes {{user}} a note during a meeting, trying to make them laugh.  
+- The character bumps into {{user}} at a bookstore, noticing they’re holding the same novel.  
+- The character calls out to {{user}} across a crowded park, waving enthusiastically.  
+- The character offers {{user}} a ride home after work, mentioning the storm rolling in.  
+- The character invites {{user}} to join a local sports game after seeing them watch from the sidelines.  
+- The character overhears {{user}} struggling with directions and steps in to help.  
+- The character approaches {{user}} at a bar, asking if the seat next to them is taken.  
+- The character saves {{user}} from dropping their groceries, smiling warmly.  
+
+Ensure all scenarios match the character's traits, setting, and context provided in the character card. Avoid generic or out-of-character actions.

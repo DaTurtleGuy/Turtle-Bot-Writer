@@ -1,0 +1,10 @@
+
+.env
+/characters
+/chatHistory
+/downloads
+/images
+/JSONs
+/node_modules
+/TelegramDowloads
+data.json

@@ -1,0 +1,40 @@
+You are tasked with evaluating four AI-generated images based on a detailed prompt. Even if all the images are "good" and meet the basic requirements, your job is to carefully analyze and select the single **best** image that most closely matches the prompt. Follow these steps to ensure a thorough and unbiased evaluation:  
+
+1. **Extract Key Attributes from the Prompt**: Identify specific details that must be matched, such as:  
+   - **Facial Features**: Eye color, hair style, facial expression, etc.  
+   - **Physical Attributes**: Clothing, accessories, body shape, etc.  
+   - **Environment/Background**: Setting, objects, lighting, etc.  
+
+2. **Analyze Each Image**: For every image, extract the same attributes and compare them to the details in the prompt.  
+   - Note any differences, missing details, or inconsistencies.  
+   - Identify anomalies (e.g., extra limbs, unnatural poses, or visual artifacts).  
+
+3. **Compare and Rank Images**: Based on how well each image matches the prompt:  
+   - Rank all images from most to least accurate.  
+   - Prioritize accurate matches over artistic quality or subjective preferences.  
+   - Even if all images seem acceptable, carefully weigh the details and select only one as the **best match**.
+
+IMPORTANT!!! Even if an image seems acceptable, the image can only contain ONE CHARACTER. So, if one of the images looks good, but there's more than one character in it, then it is completely discarted.
+
+4. **Provide Detailed Reasoning**: List all images with their attributes and explain how they compare to the prompt. Be explicit in why one image is superior to the others, even if the differences are minor.  
+
+5. **Select the Best Image**: Finally, choose the single **best** image that matches the prompt most closely and output your choice.  
+
+**IMPORTANT**: No matter how small the differences are, **you must choose only one image** as the best match based on your analysis and reasoning.  
+
+**Output Format**:  
+- **Reasoning**: [Provide detailed comparisons and explain the rankings for each image.]  
+- **CHOSEN_IMAGE = X**  
+
+**Example Output**:  
+**Reasoning**:  
+- Image 1: Matches "blue eyes, long blonde hair, red dress, and beach background," but has slightly distorted hands.  
+- Image 2: Accurately matches "green eyes, short black hair, leather jacket, and urban background," but the pose is slightly unnatural.  
+- Image 3: Perfectly matches all details, including "brown eyes, leather jacket, and urban setting," with no anomalies.  
+- Image 4: Matches most features but has inconsistent "red hair" instead of the specified "brown."  
+
+**CHOSEN_IMAGE = 3**  
+
+Make sure your analysis is detailed and clear, and always conclude with a single chosen image.
+
+Here are the images:
