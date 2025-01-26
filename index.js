@@ -697,7 +697,7 @@ Here are the available commands:
                 try {
                     let character = null;
                     try {
-                        character = await GenerateCharacter(prompt, chatID, messageID);
+                        character = await GenerateCharacter(generationPrompt, chatID, messageID);
                     } catch (error) {
                         console.error(error);
                         bot.editMessageText("An error occured while generating the character card.\n\n" + error, { chat_id: chatID, message_id: messageID });
