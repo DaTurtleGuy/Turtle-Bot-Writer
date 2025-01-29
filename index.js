@@ -182,12 +182,12 @@ async function ensureVariables() {
 }
 
 async function sendMessageInChunks(chatID, response, parseMode = '') {
-    const maxLength = 4096;
+    const maxLength = 2000;
     let lines = response.split('\n');  // Split text into lines
     let currentMessage = '';
 
     for (let i = 0; i < lines.length; i++) {
-        // Check if adding the current line would exceed the limit
+        // If adding the line would exceed the max length, send the current message and reset
         if ((currentMessage + lines[i]).length > maxLength) {
             // Send the current message and reset it for the next one
             await bot.sendMessage(chatID, currentMessage, { parse_mode: parseMode });
@@ -199,9 +199,24 @@ async function sendMessageInChunks(chatID, response, parseMode = '') {
 
     // Send any remaining message after the loop
     if (currentMessage.length > 0) {
-        bot.sendMessage(chatID, currentMessage, { parse_mode: parseMode });
+        // Ensure the last message doesn't exceed the max length by splitting if necessary
+        if (currentMessage.length > maxLength) {
+            let messageParts = [];
+            while (currentMessage.length > maxLength) {
+                let splitIndex = currentMessage.lastIndexOf(' ', maxLength);  // Find the last space within the limit
+                messageParts.push(currentMessage.slice(0, splitIndex));
+                currentMessage = currentMessage.slice(splitIndex).trim();  // Remaining part of the message
+            }
+            // Send all parts
+            for (let part of messageParts) {
+                await bot.sendMessage(chatID, part, { parse_mode: parseMode });
+            }
+        } else {
+            await bot.sendMessage(chatID, currentMessage, { parse_mode: parseMode });
+        }
     }
 }
+
 
 async function startup() {
     persistentPage = await getNewPage(pixaiHashes[0]);

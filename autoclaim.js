@@ -43,11 +43,17 @@ function getValidTokens(tokens) {
 async function claimQuotas(tokens) {
     let report = '';
     for (const token of tokens) {
-        const result = await claimDailyQuota(token);
-        const tokenIndex = tokens.indexOf(token) + 1;
-        report += `Token Number ${tokenIndex}, Result: ${result ? 'Success' : 'Failed'}\n`;
-        const credits = await getMyQuota(token);
-        report += `Credits: ${credits}\n\n`;
+        try {
+            const result = await claimDailyQuota(token);
+            const tokenIndex = tokens.indexOf(token) + 1;
+            report += `Token Number ${tokenIndex}, Result: ${result ? 'Success' : 'Failed'}\n`;
+            const credits = await getMyQuota(token);
+            report += `Credits: ${credits}\n\n`;
+        }
+        catch {
+            report += `Token Number ${tokens.indexOf(token) + 1}, Result: Failed\n`;
+            report += `Error\n\n`;
+        }
     }
     return report;
 }

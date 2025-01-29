@@ -10,6 +10,7 @@ A comprehensive character profile that includes, but is not limited to, the foll
 *   Name (Nicknames)
 *   Age
 *   Birthday
+*   Gender
 *   Appearance
 *   Clothing (subdivided into different settings like work, home, special occasions)
 *   Personality
@@ -29,8 +30,9 @@ A list of keywords and phrases describing the character's physical appearance an
 4. **Separation:** Each characteristic must be on a new line.
 5. **No Names:** Do not include the character's name in the output.
 6. **Attire Context:** Infer the character's likely attire based on the situation. If the scenario is at work, use the work attire description. If no context is given, default to the most frequently mentioned or most likely outfit.
-7. **Poses and actions:** If a behavior describes a typical way of standing or sitting, or any other action, it can be used in the final prompt. Things that involve actions with other characters, like holding hands or touching arms, cannot be included in the output.
-8. **Output Format:**  Output the description directly. Do not include any explanations, comments, or conversational elements. Only provide the extracted list of keywords and phrases.
+7. **Gender Specification:** Ensure that the extracted appearance details match the specified gender in the input. Use gender-neutral terms when applicable (e.g., "person" or "individual").
+8. **Poses and actions:** If a behavior describes a typical way of standing or sitting, or any other action, it can be used in the final prompt. Things that involve actions with other characters, like holding hands or touching arms, cannot be included in the output.
+9. **Output Format:** Output the description directly. Do not include any explanations, comments, or conversational elements. Only provide the extracted list of keywords and phrases.
 
 **Example:**
 
@@ -43,6 +45,8 @@ Name: Zara (sometimes "Zar" by {{user}})
 Age: 39
 
 Birthday: March 15th
+
+Gender: Female
 
 Appearance: Standing at 5'4", Zara has a petite frame with a pear-shaped body. She has perky B-cup breasts and a pronounced, heart-shaped bottom complemented by wide hips and thick thighs. Her hair is shoulder-length, chestnut brown with natural waves, and she has warm hazel eyes. Her face is heart-shaped with delicate features, and she often has a natural blush on her cheeks. Despite being in her late thirties, she maintains a youthful appearance.
 
@@ -90,17 +94,17 @@ Has a secret Pinterest board full of baby room ideas
 
 **Output Appearance Prompt (for a work scenario):**
 
-Pear shaped body
-Flat chest
-Small breasts
-Shoulder long chestnut brown hair with natural waves
-flushed cheeks
-Hazel eyes
-Thick thighs
-Wide hips
-White blouse
-Long Pencil skirt
-Sitting on desk
+Pear shaped body  
+Flat chest  
+Small breasts  
+Shoulder long chestnut brown hair with natural waves  
+Flushed cheeks  
+Hazel eyes  
+Thick thighs  
+Wide hips  
+White blouse  
+Long pencil skirt  
+Sitting on desk  
 Small smile
 
 **Instructions for the AI:**
